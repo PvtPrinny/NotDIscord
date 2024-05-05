@@ -1,0 +1,114 @@
+html{
+    background-color: #1E1F22;
+}
+
+body{
+    margin:0;
+}
+
+.home-main-div{
+    background-color: #1E1F22;
+    /* display: flex; */
+}
+
+.server-toggle{
+    width: 5%;
+    height: 100vh;
+    position: absolute;
+    background-color: #1E1F22;
+    /* overflow: hidden scroll; */
+}
+
+
+.content-div{
+    /* width: 96.5vw; */
+    /* width: 96%; */
+    /* top: 10vh; */
+    
+    position: absolute;
+    display: flex;
+    left: 4rem;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    /* justify-content: space-between; */
+    /* row-gap: 0; */
+}
+
+.left-content-div{
+    width:24rem;
+}
+
+.server-header{
+    background-color: #2B2D31;
+    /* height: 7vh; */
+    height: 7vh;
+    border-bottom: #1F2124 solid 1px;
+}
+
+.channel-toggle{
+    background-color: #2B2D31;
+    /* height:80vh; */
+    height: calc(100% - 14.1vh); /* Adjust the height as needed */
+}
+
+.user-status{
+    background-color: #232428;
+    /* width: 14rem; */
+    height: 7vh;
+    /* position: absolute; */
+    /* margin-top: 79vh;
+    margin-left: 4.2vw; */
+    /* bottom: 0; */
+    left: 7rem;
+}
+
+
+.channel-container{
+    /* width: 100%; */
+    margin: 0;
+    padding: 0;
+}
+
+.channel-header{
+    background-color: #313338;
+    height: 7vh;
+    width: 84vw;
+    border-bottom: #1F2124 solid 1px;
+    
+}
+
+.content-container{
+    display: flex;
+    /* width: 100%; */
+}
+
+.middle-content-div{
+    width:100%;
+    background-color: #313338;
+    height:92.8vh;
+}
+
+.post-area{
+    /* left: 21vw; */
+    width:100%;
+    height:85vh;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+}
+
+.comment{
+    background-color: #383A40;
+    left: 1%;
+    width: 97%;
+    height: 5vh;
+    border-width: 0;
+    border-radius: 7px;
+    padding-left: 14px;
+}
+
+.user-area{
+    background-color: #2B2D31;
+    height:92.8vh;
+    width: 24rem;
+}

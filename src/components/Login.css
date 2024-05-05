@@ -1,0 +1,125 @@
+
+@font-face {
+    font-family: 'GG Sans Regular'; /* Name your font family */
+    src: url('../assets/gg\ sans\ Regular.ttf'); /* Locate the .ttf file within your directory*/
+}
+
+@font-face {
+    font-family: 'GG Sans Bold'; /* Name your font family */
+    src: url('../assets/gg\ sans\ Bold.ttf'); /* Locate the .ttf file within your directory*/
+}
+
+h1{
+    color: #BCBEC1;
+    font-family: 'GG Sans Bold';
+}
+
+.auth-div{
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("../assets/PixelBG.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-div{
+    background-color: #2B2D31;
+    /* position:absolute; */
+    width: 800px;
+    height: 450px;
+    margin-top: 200px;
+    border-radius: 7px;
+}
+
+.form-flex{
+    display: flex;
+}
+.auth-form{
+    /* text-align: center; */
+    /* padding-left: 30px; */
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 40px;
+    width: 350px;
+}
+
+label{
+    color: #BCBEC1;
+    font-family: 'GG Sans Bold';
+}
+.textbox{
+    width: 20rem;
+    height: 2rem;
+    /* padding: 0; */
+    background-color: #202225;
+    color: #BCBEC1;
+    font-family: 'GG Sans Bold';
+    border-radius: 3px;
+    border-width: 0;
+    margin-top: 3px;
+    padding-left: 5px;
+}
+
+.input-label{
+    width: 16rem;
+    height: 2rem;
+    text-align: left;
+}
+
+.login-btn{
+    border-radius: 2px;
+    width: 20.1rem;
+    height: 2.3rem;
+    background-color: #5765F2;
+    font-family: 'GG Sans Bold';
+    color: #BCBEC1;
+    border-width: 0;
+}
+
+.LoginPic{
+    width: 240px;
+    margin-left: 70px;
+    /* height: 400px; */
+}
+
+.register-toggle{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.prevent-select {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+
+.show-password {
+    margin-top: 5px;
+}
+
+.noselect {
+    /* margin-top: 10px; */
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+  }
+
+.LoginError{
+    height: 20px;
+    color: red;
+    visibility: hidden;
+    margin-top: 4px;
+    text-align: center;
+  }
+
+.error-message.show {
+  visibility: visible;
+}
