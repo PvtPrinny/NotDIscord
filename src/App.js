@@ -33,8 +33,8 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/auth" element={<Auth />} />
             <Route
-            path="/"
-            element={
+              path="*"
+              element={
               loggedIn ? <Navigate to="/home" /> : <Navigate to="/auth" />
             }
             />
@@ -48,3 +48,4 @@ export default App;
 //npm install react-router-dom
 //npm install firebase
 //npm install -g firebase-tools
+//npm install gh-pages --save-dev
