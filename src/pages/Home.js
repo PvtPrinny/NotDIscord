@@ -7,6 +7,7 @@ import { auth, googleProvider } from "../config/firebase";
 const Home = () => {
 
   const navigate = useNavigate();
+  
   const [loggedIn,setLoggedIn] = useState(null);
   const [comment,setComment] = useState("");
 
@@ -20,10 +21,13 @@ const Home = () => {
       else{
         setLoggedIn(false)
         console.log("logged out");
+        <Navigate to="/home" />
       }
     });
     return() => unsubscribe();
   }, [])
+
+  
 
   return (
     <div className='home-main-div'>

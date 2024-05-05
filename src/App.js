@@ -30,14 +30,14 @@ function App() {
     <div className="App">
         <HashRouter>
           <Routes>
-            <Route path="/home" element={<Home />} />
             <Route path="/auth" element={<Auth />} />
-            <Route
+            <Route path="/home" element={<Home />} />
+            {/* <Route
               path="*"
               element={
               loggedIn ? <Navigate to="/home" /> : <Navigate to="/auth" />
             }
-            />
+            /> */}
           </Routes>
         </HashRouter>
     </div>
