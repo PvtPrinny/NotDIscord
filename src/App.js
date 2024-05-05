@@ -1,4 +1,5 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
 import { auth } from "./config/firebase";
 import { onAuthStateChanged } from 'firebase/auth';
@@ -9,21 +10,21 @@ import Home from './pages/Home.js'
 function App() {
 
   // const navigate = useNavigate();
-  // const [loggedIn,setLoggedIn] = useState(null);
+  const [loggedIn,setLoggedIn] = useState(null);
 
-  //   useEffect(() => { // checks whether any user is logged in
-  //     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-  //         if(currentUser){
-  //           setLoggedIn(true)
-  //           console.log("logged in");
-  //         }
-  //         else{
-  //           setLoggedIn(false)
-  //           console.log("logged out");
-  //         }
-  //     });
-  //     return() => unsubscribe();
-  // }, [])
+    useEffect(() => { // checks whether any user is logged in
+      const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+          if(currentUser){
+            setLoggedIn(true)
+            console.log("logged in");
+          }
+          else{
+            setLoggedIn(false)
+            console.log("logged out");
+          }
+      });
+      return() => unsubscribe();
+  }, [])
 
   return (
 
@@ -33,12 +34,12 @@ function App() {
             <Route path="*" element={<Auth />} />
             <Route path="/" element={<Auth />} />
             <Route path="/home" element={<Home />} />
-            {/* <Route
+            <Route
               path="/"
               element={
               loggedIn ? <Navigate to="/home" /> : <Navigate to="/auth" />
               }
-            /> */}
+            />
           </Routes>
         </HashRouter>
     </div>
