@@ -49,7 +49,7 @@ const Home = () => {
                   type='text'
                   id='comment'
                   className='comment'
-                  placeholder="What's on your mind?"
+                  placeholder="What's on your mind? Jason"
                   onChange={(e) => {
                     setComment(e.target.value);
                   }}
