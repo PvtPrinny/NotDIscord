@@ -7,7 +7,7 @@ import { auth, googleProvider } from "../config/firebase";
 const Home = () => {
 
   const navigate = useNavigate();
-  
+
   const [loggedIn,setLoggedIn] = useState(null);
   const [comment,setComment] = useState("");
 
@@ -16,12 +16,11 @@ const Home = () => {
       if(currentUser){
         setLoggedIn(true)
         console.log("user " + currentUser.email + "logged in");
-        navigate("/home"); // Redirect to homepage if user is already logged in;
       }
       else{
         setLoggedIn(false)
         console.log("logged out");
-        <Navigate to="/home" />
+        navigate("/"); // Redirect to login if user isn't already logged in;
       }
     });
     return() => unsubscribe();
