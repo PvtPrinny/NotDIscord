@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/NotDiscord/static/css/main.f38fe3cf.css",
+    "main.js": "/NotDiscord/static/js/main.51ea9b3d.js",
+    "static/media/PixelBG.jpg": "/NotDiscord/static/media/PixelBG.91e31231fe6a724d24fb.jpg",
+    "static/media/HeroPrinny.png": "/NotDiscord/static/media/HeroPrinny.a05e613745c2799a067b.png",
+    "static/media/gg sans Bold.ttf": "/NotDiscord/static/media/gg sans Bold.8c974359b3d8560e22f7.ttf",
+    "static/media/gg sans Regular.ttf": "/NotDiscord/static/media/gg sans Regular.5e3cb65b9a804d263414.ttf",
+    "index.html": "/NotDiscord/index.html",
+    "main.f38fe3cf.css.map": "/NotDiscord/static/css/main.f38fe3cf.css.map",
+    "main.51ea9b3d.js.map": "/NotDiscord/static/js/main.51ea9b3d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f38fe3cf.css",
+    "static/js/main.51ea9b3d.js"
+  ]
+}
