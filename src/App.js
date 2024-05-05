@@ -3,7 +3,7 @@ import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
 import { auth } from "./config/firebase";
 import { onAuthStateChanged } from 'firebase/auth';
 import Auth from './components/Login.js';
-import Homepage from './pages/Home.js'
+import Home from './pages/Home.js'
 
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
           <Routes>
             <Route path="*" element={<Auth />} />
             <Route path="/" element={<Auth />} />
-            <Route path="/home" element={<Homepage />} />
+            <Route path="/home" element={<Home />} />
             {/* <Route
               path="/"
               element={
