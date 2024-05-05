@@ -43,7 +43,7 @@ const Auth = () => {
     }
     try{
       await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
-      navigate("/home"); // Redirect to homepage after successful register
+      // navigate("/home"); // Redirect to homepage after successful register
     }catch(err){
       console.error(err);
       if(err.message == "Firebase: Error (auth/email-already-in-use)."){
@@ -58,7 +58,7 @@ const Auth = () => {
   const login = async () => { // for user login
     try{
       await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
-      navigate("/home"); // Redirect to homepage after successful login
+      // navigate("/home"); // Redirect to homepage after successful login
     }
     catch(err){
       console.error(err);
@@ -75,7 +75,7 @@ const Auth = () => {
       <div className='form-div'>
         {toggleRegister ? <h1>Create an Account</h1> : <h1>Welcome back!</h1>}
       <div className='form-flex'>
-          <form className='auth-form'>
+          <form className='auth-form' onSubmit={(e) => {e.preventDefault()}}>
             {!toggleRegister && <div className='login-form'>
               <label htmlFor='login-name'>EMAIL OR USERNAME <span className='required' style={{color:'red'}}>*</span></label>
               <br/>
@@ -129,9 +129,7 @@ const Auth = () => {
               />
               <br/>
               <br/>
-              <label htmlFor='password'
-                id='password'
-                class>PASSWORD <span className='required' style={{color:'red'}}>*</span></label>
+              <label htmlFor='register-password'>PASSWORD <span className='required' style={{color:'red'}}>*</span></label>
               <input
                 type={showPassword ? "text" : "password"}
                 id="register-password"

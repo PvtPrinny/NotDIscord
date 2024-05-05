@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import { HashRouter, Route, Routes, useNavigate } from "react-router-dom";
+import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
 import { auth } from "./config/firebase";
 import { onAuthStateChanged } from 'firebase/auth';
 import Auth from './components/Login.js';
@@ -29,15 +29,15 @@ function App() {
   return (
 
     <div className="App">
-        <HashRouter>
+        <HashRouter >
           <Routes>
             <Route path="/" element={<Auth />} />
             <Route path="/home" element={<Home />} />
             {/* <Route
-              path="*"
+              path="/"
               element={
               loggedIn ? <Navigate to="/home" /> : <Navigate to="/auth" />
-            }
+              }
             /> */}
           </Routes>
         </HashRouter>
