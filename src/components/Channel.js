@@ -1,10 +1,14 @@
-import React from 'react'
-import TextChannel from './TextChannel';
+import { useState, useEffect } from 'react'
 
-const Channel = () => {
+const Channel = ( {channelName}) => {
+    
   return (
     <div>
-      <TextChannel />
+      {channelName.map((channelName,index) => (
+        <div key={index} className='text-channel-name'>
+            <p>{channelName.id}</p>
+        </div>
+      ))}
     </div>
   )
 }

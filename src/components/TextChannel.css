@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'GG Sans Regular'; /* Name your font family */
+    src: url('../assets/gg\ sans\ Regular.ttf'); /* Locate the .ttf file within your directory*/
+}
+
+@font-face {
+    font-family: 'GG Sans Bold'; /* Name your font family */
+    src: url('../assets/gg\ sans\ Bold.ttf'); /* Locate the .ttf file within your directory*/
+}
+
+.comments-div{
+    display: flex;
+}
+
+.profile-pic{
+    width: 3rem;
+    margin-top: 15px;
+    margin-right: 7px;
+}
+
+.userName{
+    margin-bottom:5px;  
+    /* font-family: 'GG Sans Bold';   */
+}
+
+.userComment{
+    margin: 0;
+    /* font-family: 'GG Sans Bold'; */
+}
+
+.date{
+    /* align-content: center; */
+    margin-left: 0.6rem;
+    margin-top: 1rem;
+    color: #616866;
+}
