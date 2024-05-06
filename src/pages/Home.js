@@ -5,25 +5,10 @@ import { useNavigate } from 'react-router-dom';
 import { addDoc, collection, getDocs } from "firebase/firestore";
 import { db, auth } from "../config/firebase";
 import TextChannel from '../components/TextChannel';
-import Channel from '../components/TextChannel';
 import HashtagIcon from '../assets/text-channel-icon.png'
-// import {firebase, getFirestore, enableIndexedDbPersistence } from 'firebase/compat/app'; //v9
-import { firebase, getFirestore, enableIndexedDbPersistence } from "firebase/compat/firestore";
+import { onSnapshot } from "firebase/firestore";
+
 const Home = () => {
-
-
-  const firebaseConfig = {
-    // your config
-  };
-  
-  const firebaseApp = initializeApp(firebaseConfig);
-  const firestore = getFirestore(firebaseApp);
-  
-  // Enable offline persistence
-  enableIndexedDbPersistence(firestore, {
-    synchronizeTabs: true,
-    cacheSizeBytes: firebase.firestore.CACHE_SIZE_UNLIMITED
-  });
 
   const navigate = useNavigate();
 
