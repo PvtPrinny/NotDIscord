@@ -155,12 +155,13 @@ body{
 
 .comment{
     background-color: #383A40;
+    color: #CBCDD1;
     /* left: 0.5%; */
     width: 96%;
     height: 5vh;
     border-width: 0;
     border-radius: 7px;
-    padding-left: 14px;
+    padding-left: 2rem;
     font-family: 'GG Sans Bold';
 }
 
