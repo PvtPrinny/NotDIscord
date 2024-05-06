@@ -7,8 +7,8 @@ import { db, auth } from "../config/firebase";
 import TextChannel from '../components/TextChannel';
 import Channel from '../components/TextChannel';
 import HashtagIcon from '../assets/text-channel-icon.png'
-import {firebase, getFirestore, enableIndexedDbPersistence } from 'firebase/compat/app'; //v9
-
+// import {firebase, getFirestore, enableIndexedDbPersistence } from 'firebase/compat/app'; //v9
+import { firebase, getFirestore, enableIndexedDbPersistence } from "firebase/compat/firestore";
 const Home = () => {
 
 
