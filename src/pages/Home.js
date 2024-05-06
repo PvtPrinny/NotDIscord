@@ -7,9 +7,23 @@ import { db, auth } from "../config/firebase";
 import TextChannel from '../components/TextChannel';
 import Channel from '../components/TextChannel';
 import HashtagIcon from '../assets/text-channel-icon.png'
-import firebase from 'firebase/compat/app'; //v9
+import {firebase, getFirestore, enableIndexedDbPersistence } from 'firebase/compat/app'; //v9
 
 const Home = () => {
+
+
+  const firebaseConfig = {
+    // your config
+  };
+  
+  const firebaseApp = initializeApp(firebaseConfig);
+  const firestore = getFirestore(firebaseApp);
+  
+  // Enable offline persistence
+  enableIndexedDbPersistence(firestore, {
+    synchronizeTabs: true,
+    cacheSizeBytes: firebase.firestore.CACHE_SIZE_UNLIMITED
+  });
 
   const navigate = useNavigate();
 
@@ -18,20 +32,32 @@ const Home = () => {
   const [textInput,setTextInput] = useState("");
   const [postLists,setPostList] = useState([]);
 
-  useEffect(() => { // checks whether any user is logged in
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if(currentUser){
-        setLoggedIn(true)
-        // console.log("user " + currentUser.email + "logged in");
-      }
-      else{
-        setLoggedIn(false)
-        console.log("logged out");
-        navigate("/"); // Redirect to login if user isn't already logged in;
-      }
+  // useEffect(() => { // checks whether any user is logged in
+  //   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+  //     if(currentUser){
+  //       setLoggedIn(true)
+  //       // console.log("user " + currentUser.email + "logged in");
+  //     }
+  //     else{
+  //       setLoggedIn(false)
+  //       console.log("logged out");
+  //       navigate("/"); // Redirect to login if user isn't already logged in;
+  //     }
+  //   });
+  //   return() => unsubscribe();
+  // }, [])
+
+  useEffect(() => {
+    console.log("useEffect triggered");
+    const unsubscribe = onSnapshot(postsCollectionRef, (snapshot) => {
+      const fetchedPosts = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id
+      }));
+      setPostList(fetchedPosts);
     });
-    return() => unsubscribe();
-  }, [])
+    return () => unsubscribe();
+  }, []);
 
   const postsCollectionRef = collection(db, "posts");
 
