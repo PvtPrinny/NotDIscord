@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/NotDiscord/static/css/main.c7125a0e.css",
-    "main.js": "/NotDiscord/static/js/main.ef289892.js",
+    "main.css": "/NotDiscord/static/css/main.f41793ee.css",
+    "main.js": "/NotDiscord/static/js/main.eb8e89c8.js",
     "static/media/PixelBG.jpg": "/NotDiscord/static/media/PixelBG.91e31231fe6a724d24fb.jpg",
     "static/media/HeroPrinny.png": "/NotDiscord/static/media/HeroPrinny.a05e613745c2799a067b.png",
     "static/media/gg sans Bold.ttf": "/NotDiscord/static/media/gg sans Bold.8c974359b3d8560e22f7.ttf",
     "static/media/gg sans Regular.ttf": "/NotDiscord/static/media/gg sans Regular.5e3cb65b9a804d263414.ttf",
     "static/media/PrinnyProfilePic.png": "/NotDiscord/static/media/PrinnyProfilePic.3707dd08d44ec5ba8fb8.png",
     "index.html": "/NotDiscord/index.html",
-    "main.c7125a0e.css.map": "/NotDiscord/static/css/main.c7125a0e.css.map",
-    "main.ef289892.js.map": "/NotDiscord/static/js/main.ef289892.js.map"
+    "main.f41793ee.css.map": "/NotDiscord/static/css/main.f41793ee.css.map",
+    "main.eb8e89c8.js.map": "/NotDiscord/static/js/main.eb8e89c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.c7125a0e.css",
-    "static/js/main.ef289892.js"
+    "static/css/main.f41793ee.css",
+    "static/js/main.eb8e89c8.js"
   ]
 }
