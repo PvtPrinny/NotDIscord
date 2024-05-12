@@ -29,7 +29,8 @@
 }
 
 .first-row{
-    display: flex;
+    /* display: flex; */
+    display: inline-flex;
 }
 
 .date{
@@ -37,4 +38,5 @@
     margin-left: 0.6rem;
     margin-top: 1rem;
     color: #616866;
+    font-size: 0.8rem;
 }

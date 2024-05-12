@@ -4,9 +4,10 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { addDoc, collection, getDocs } from "firebase/firestore";
 import { db, auth } from "../config/firebase";
+import { onSnapshot } from "firebase/firestore";
 import TextChannel from '../components/TextChannel';
 import HashtagIcon from '../assets/text-channel-icon.png'
-import { onSnapshot } from "firebase/firestore";
+import Placeholder from '../assets/PrinnyProfilePic.png'
 
 const Home = () => {
 
@@ -110,7 +111,20 @@ const Home = () => {
                 Posts
               </div>
             </div>
-            <div className='user-status'></div>
+
+            <div className='user-bar'>
+              <div className='user-pic-div'>
+              <img src={Placeholder} className='user-pic'/>
+              </div>
+              <div className='user-info'>
+                <div className='user-name'>
+                  {auth.currentUser.email}
+                </div>
+                <div className='user-status'>
+                  Online
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* <div className='channel-container'> */}
