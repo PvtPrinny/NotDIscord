@@ -17,21 +17,6 @@ const Home = () => {
   const [textInput,setTextInput] = useState("");
   const [postLists,setPostList] = useState([]);
 
-  // useEffect(() => { // checks whether any user is logged in
-  //   const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-  //     if(currentUser){
-  //       setLoggedIn(true)
-  //       // console.log("user " + currentUser.email + "logged in");
-  //     }
-  //     else{
-  //       setLoggedIn(false)
-  //       console.log("logged out");
-  //       navigate("/"); // Redirect to login if user isn't already logged in;
-  //     }
-  //   });
-  //   return() => unsubscribe();
-  // }, [])
-
   useEffect(() => {
     console.log("useEffect triggered");
     const unsubscribe = onSnapshot(postsCollectionRef, (snapshot) => {

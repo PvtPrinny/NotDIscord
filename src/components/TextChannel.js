@@ -35,17 +35,19 @@ const TextChannel = ( {comments} ) => {
   return (
     <div>
       {sortedComments.map((comment,index) => (
-        <div key={index} className='comments-div'>
-        <div>
-          <img src={Placeholder} className='profile-pic'/>
-        </div>
-        <div>
-          <p style={{color: 'white'}} className='userName'>{comment.userName}</p>
-          <p style={{color: 'white'}} className='userComment'>{comment.comment}</p>
-        </div>
-        <div className='date'>
-          {dateConvert(comment.date)}
-        </div>
+        <div className='comments-div'>
+          <div>
+            <img src={Placeholder} className='profile-pic'/>
+          </div>
+          <div key={index} >
+            <div className='first-row'>
+              <p style={{color: 'white'}} className='userName'>{comment.userName}</p>
+              <span className='date'>
+                {dateConvert(comment.date)}
+              </span>
+            </div>
+              <p style={{color: 'white'}} className='userComment'>{comment.comment}</p>
+          </div>
         </div>
       ))}
     </div>

@@ -28,6 +28,10 @@
     /* font-family: 'GG Sans Bold'; */
 }
 
+.first-row{
+    display: flex;
+}
+
 .date{
     /* align-content: center; */
     margin-left: 0.6rem;
